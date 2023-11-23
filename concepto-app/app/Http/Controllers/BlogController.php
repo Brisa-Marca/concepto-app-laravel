@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Blogpost;
 use App\Models\Author;
-use DebugBar\DebugBar;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
-use Illuminate\Http\UploadedFile;
-use Intervention\Image\ImageManagerStatic as Image;
 
 class BlogController extends Controller
 {

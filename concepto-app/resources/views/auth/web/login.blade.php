@@ -34,10 +34,8 @@
         </form>
 
         <div class="btn-register">
-
             <p>¿Aun no tienes cuenta?</p>
             <a href="{{url('/registrar')}}">Registrarse</a>
-
         </div>
 
     </div>

@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 
 class AuthController extends Controller
 {
@@ -77,7 +76,7 @@ class AuthController extends Controller
     {
         $request->validate(User::CREATE_RULES, User::CREATE_MESSAGES);
 
-        $credentials = $request->only(['username' , 'password']);
+        $credentials = $request->only(['username', 'password']);
 
         if ($credentials['username'] != "Admin") {
             return redirect()
@@ -85,19 +84,17 @@ class AuthController extends Controller
                 ->withInput()
                 ->with('status.message', 'No sos el admin.');
         } else {
-            if(!auth()->attempt($credentials)){
+            if (!auth()->attempt($credentials)) {
                 return redirect()
-                ->route('auth.admin.login.form')
-                ->withInput()
-                ->with('status.message', 'Las credenciales ingresadas no coinciden con nuestros registros.');
+                    ->route('auth.admin.login.form')
+                    ->withInput()
+                    ->with('status.message', 'Las credenciales ingresadas no coinciden con nuestros registros.');
             } else {
                 return redirect()
-                ->route('admin.home')
-                ->with('status.message', '¡Hola de nuevo, ' . auth()->user()->username . '!');
+                    ->route('admin.home')
+                    ->with('status.message', '¡Hola de nuevo, ' . auth()->user()->username . '!');
             }
-               
         }
-        
     }
 
     public function logoutProcessAdmin(Request $request)
@@ -125,7 +122,6 @@ class AuthController extends Controller
 
     public function viewDetailUser(int $id)
     {
-
         return view('admin.user.viewDetail', [
             'user' => User::find($id),
         ]);

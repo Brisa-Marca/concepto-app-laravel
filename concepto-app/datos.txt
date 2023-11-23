@@ -1,0 +1,20 @@
+Alumnas:
+Apellido y Nombre: Almirón Ana Laura.
+Carrera: Diseño y Desarrollo Web.
+Materia: Portales y Comercio Electrónico.
+Cuatrimestre: Cuarto Cuatrimestre.
+Año: 2023.
+Turno: Tarde.
+Comisión: DWT4AH.
+Docente: Santiago Gallino.
+Carácter de entrega: 2do parcial.
+
+Apellido y Nombre: Marca Jaimes Brisa Belen.
+Carrera: Diseño y Desarrollo Web.
+Materia: Portales y Comercio Electrónico.
+Cuatrimestre: Cuarto Cuatrimestre.
+Año: 2023.
+Turno: Tarde.
+Comisión: DWT4AH.
+Docente: Santiago Gallino.
+Carácter de entrega: 2do parcial.

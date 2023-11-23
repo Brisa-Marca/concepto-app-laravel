@@ -5,9 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Service extends Model
+class Category extends Model
 {
     // use HasFactory;
-
-    protected $primaryKey = 'service_id';
+    protected $primaryKey = 'category_id';
 }

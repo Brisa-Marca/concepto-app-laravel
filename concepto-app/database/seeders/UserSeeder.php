@@ -20,7 +20,7 @@ class UserSeeder extends Seeder
                 'username' => 'Admin',
                 'email' => 'admin@gmail.com',
                 'password' => Hash::make('admin'),
-                'service_id' =>4,
+                'service_id' => 4,
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -50,6 +50,7 @@ class UserSeeder extends Seeder
                 'service_id' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
-            ],        ]);
+            ],
+        ]);
     }
 }

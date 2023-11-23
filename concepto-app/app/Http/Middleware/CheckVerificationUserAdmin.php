@@ -6,7 +6,6 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 use Symfony\Component\HttpFoundation\Response;
 
 
@@ -24,13 +23,13 @@ class CheckVerificationUserAdmin
         // Obtener el usuario autenticado
         $user = Auth::user();
 
-        // Verificar si el nombre de usuario coincide con el proporcionado
+        // Verificar si el nombre de usuario coincide con el proporcionado en este caso 'Admin'
         if ($user->username === $username) {
             return $next($request);
         }
     }
 
-    // Si no coincide, redirigir o responder según la lógica de tu aplicación
+    // Si no coincide, redirigir al login de un usuario común.
     return redirect()
                 ->route('auth.web.login.form');
 

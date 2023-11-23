@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 use Illuminate\Support\Facades\DB;
+
 class ServiceSeeder extends Seeder
 {
     /**
@@ -19,31 +20,30 @@ class ServiceSeeder extends Seeder
                 'service_id' => 1,
                 'name' => 'Básico',
                 'description' => 'Para los que solo queiren acceder a nuestro inmenso catálogo.',
-                'price'=> 3000,
+                'price' => 3000,
 
             ],
             [
                 'service_id' => 2,
                 'name' => 'Empresarial',
                 'description' => 'Para las empresas que quieren llevar a sus talentos al siguiente nivel.',
-                'price'=> 15000,
+                'price' => 15000,
 
             ],
             [
                 'service_id' => 3,
                 'name' => 'Premium',
                 'description' => 'Para los que buscan vivir la experiencia completa de concepto',
-                'price'=> 10000,
+                'price' => 10000,
 
             ],
             [
                 'service_id' => 4,
                 'name' => 'Sin servicio',
                 'description' => 'No contrato ningun servicio',
-                'price'=> 0,
+                'price' => 0,
 
             ]
         ]);
-
     }
 }

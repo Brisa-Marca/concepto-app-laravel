@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use  App\Http\Controllers\Middleware\CheckVerificationUserAdmin;
+// use  App\Http\Controllers\Middleware\CheckVerificationUserAdmin;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,11 +45,9 @@ Panel de administración
 ----------------------------*/
 
 
-Route::get('/admin/iniciar-sesion', [\App\Http\Controllers\AuthController::class, 'loginFormAdmin'])
-->name('auth.admin.login.form');
+Route::get('/admin/iniciar-sesion', [\App\Http\Controllers\AuthController::class, 'loginFormAdmin'])->name('auth.admin.login.form');
 
-Route::post('/admin/iniciar-sesion', [\App\Http\Controllers\AuthController::class, 'loginProcessAdmin'])
-->name('auth.admin.login.process');
+Route::post('/admin/iniciar-sesion', [\App\Http\Controllers\AuthController::class, 'loginProcessAdmin'])->name('auth.admin.login.process');
 
 
 Route::post('/admin/cerrar-sesion', [\App\Http\Controllers\AuthController::class, 'logoutProcessAdmin'])->name('auth.admin.logout.process');
